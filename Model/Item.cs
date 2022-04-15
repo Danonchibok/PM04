@@ -11,11 +11,22 @@ namespace pm04.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Item
+    using System.ComponentModel;
+    using System.Runtime.CompilerServices;
+
+    public partial class Item : INotifyPropertyChanged
     {
+        private int count;
         public int ID { get; set; }
-        public int Count { get; set; }
+        public int Count
+        {
+            get => count;
+            set
+            {
+                count = value;
+                OnPropertyChanged("Count");
+            }
+        }
         public string Name { get; set; }
         public byte[] Image { get; set; }
         public string Src { get; set; }
@@ -24,5 +35,15 @@ namespace pm04.Model
     
         public virtual Category Category { get; set; }
         public virtual Items_order Items_order { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged([CallerMemberName] string name = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
+        }
     }
 }

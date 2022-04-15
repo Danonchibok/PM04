@@ -40,7 +40,7 @@ namespace pm04
                     users = users.Where(ee => ee.Password == varPassword).ToList();
                     if (users.Count >0)
                     {
-                        NavigationClass.mainFrame.Navigate(new Glavnaya());
+                        NavigationClass.Navigate(new Glavnaya());
                     }
                     else
                     {
@@ -60,7 +60,7 @@ namespace pm04
 
         private void Button_Create(object sender, RoutedEventArgs e)
         {
-            NavigationClass.mainFrame.Navigate(new Registration());
+            NavigationClass.Navigate(new Registration());
         }
     }
 }

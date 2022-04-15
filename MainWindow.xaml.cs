@@ -24,8 +24,8 @@ namespace pm04
         public MainWindow()
         {
             InitializeComponent();
-            NavigationClass.mainFrame = MainFrame;
-            NavigationClass.mainFrame.Navigate(new AuthPage());
+            NavigationClass.Init(MainFrame);
+            NavigationClass.Navigate(new AuthPage());
         }
     
     }

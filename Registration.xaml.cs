@@ -35,7 +35,7 @@ namespace pm04
                 
                 if (RegistrateUser())
                 {
-                    NavigationClass.mainFrame.Navigate(new Glavnaya());
+                    NavigationClass.Navigate(new Glavnaya());
                 }
             }
             rega.SelectedItem = rega.Items[tabIndex];
@@ -46,7 +46,7 @@ namespace pm04
             if (tabIndex < 0)
             {
                 tabIndex = 0;
-                NavigationClass.mainFrame.Navigate(new AuthPage());
+                NavigationClass.Navigate(new AuthPage());
             }
             rega.SelectedItem = rega.Items[tabIndex];
         }

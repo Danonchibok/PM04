@@ -9,6 +9,7 @@ namespace pm04
 {
     internal class TemplateContext
     {
+        public static User User { get; set; } 
         private static PM04Entities context;
         public static PM04Entities GetContext()
         {

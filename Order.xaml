@@ -26,7 +26,7 @@
                     <Button Width="80" Height="25"
                             Margin="330,0,0,0"
                             Content="Назад" Background="White" 
-                            BorderThickness="1" BorderBrush="Black" Click="Button_market"/>
+                            BorderThickness="1" BorderBrush="Black" Click="Button_back "/>
                 </StackPanel>
             </Border>
         </StackPanel>
@@ -39,7 +39,7 @@
                             BorderBrush="Gray"
                             Margin="0,2,0,10"
                             Name="textLastName"
-                            FontSize="19"/>
+                            FontSize="19"></TextBox>
                     <TextBlock Text="Имя:" FontSize="19"
                            Margin="5,20,0,0"/>
                     <TextBox Width="320" Height="30"

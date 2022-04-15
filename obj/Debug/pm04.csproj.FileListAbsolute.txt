@@ -101,3 +101,5 @@ E:\pm04\pm04\obj\Debug\pm04.Properties.Resources.resources
 E:\pm04\pm04\obj\Debug\pm04.csproj.GenerateResource.cache
 E:\pm04\pm04\obj\Debug\pm04.csproj.CoreCompileInputs.cache
 E:\pm04\pm04\obj\Debug\pm04.csproj.CopyComplete
+E:\pm04\pm04\obj\Debug\Cart.g.cs
+E:\pm04\pm04\obj\Debug\Cart.baml

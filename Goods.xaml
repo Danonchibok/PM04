@@ -8,7 +8,7 @@
              d:DesignHeight="750" d:DesignWidth="1000">
     <StackPanel>
         <StackPanel>
-            <Border Width="1000" Height="50" Opacity="1" Background="Gray">
+            <Border  Height="50" Opacity="1" Background="Gray">
                 <StackPanel Orientation="Horizontal">
                     <Button Width="30" Height="30" Margin="10,0,0,0" Click="Button_Vk">
                         <Image Source="Image/vk.png" Margin="-4,-4,0,0" Width="34" Height="34"/>
@@ -25,9 +25,10 @@
                                FontSize="30" FontWeight="Bold"/>
                     <Button Width="80" Height="25"
                             Margin="330,0,0,0"
-                            Content="Корзина" Background="White" 
+                            Background="White" 
                             BorderThickness="1" BorderBrush="Black"
-                            />
+                            Click="Cart_button"
+                            Content="{Binding ShopingCart, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
             </Border>
         </StackPanel>
@@ -40,7 +41,7 @@
                       FontSize="20"
                       Margin="0,5,0,0"
                       Name="itemListView"
-                      ItemsSource="{Binding Items}">
+                      ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged}">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" Background="Transparent"></StackPanel>
@@ -63,9 +64,9 @@
                                                Width="200"
                                                Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,5">
-                                        <Button Content="-" Width="30" Height="30" Background="LightGreen"/>
-                                        <TextBox Width="100" Height="30" Background="LightGreen" Margin="5,0,5,0"/>
-                                        <Button Content="+" Width="30" Height="30" Background="LightGreen"/>
+                                        <Button Content="-" Width="30" Height="30" Background="LightGreen" Click="decrease_button"/>
+                                        <TextBox Text="{Binding Count}" Width="100" Height="30" Background="LightGreen" Margin="5,0,5,0"/>
+                                        <Button Content="+" Width="30" Height="30" Background="LightGreen" Click="increase_button"/>
                                     </StackPanel>
                                     <Button Content="Добавить в корзину" 
                                             Width="160" Height="30" Background="LightGreen" 

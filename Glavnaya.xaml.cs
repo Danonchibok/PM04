@@ -68,7 +68,7 @@ namespace pm04
         private void categoriesListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Category item = categoriesListView.SelectedItem as Category;
-            NavigationClass.mainFrame.Navigate(new Goods(item));
+            NavigationClass.Navigate(new Goods(item));
         }
     }
 }
