@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D687E6F-5884-4B9E-8297-076D9EFFB5C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pm04</RootNamespace>
+    <AssemblyName>pm04</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconnn.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AuthPage.xaml.cs">
+      <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\TemplateContext.cs" />
+    <Compile Include="Glavnaya.xaml.cs">
+      <DependentUpon>Glavnaya.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Goods.xaml.cs">
+      <DependentUpon>Goods.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Address.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Item.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Items_order.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Order.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationClass.cs" />
+    <Compile Include="Order.xaml.cs">
+      <DependentUpon>Order.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Glavnaya.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Goods.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Order.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconnn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\04044f54256e572b2b24ca70dda6180b.png" />
+    <Resource Include="Image\0692ad3d8ce2266cfed30bd0491dff11.jpg" />
+    <Resource Include="Image\0791b75a85c1c15f7bcda747deaed4e8.jpg" />
+    <Resource Include="Image\0794810d431a55680171711188fbc34a.jpg" />
+    <Resource Include="Image\09430596b773a2cfa482464118a43d77.jpg" />
+    <Resource Include="Image\097e4c2e5d44194ea82d63a229bad177.jpg" />
+    <Resource Include="Image\097fb976fefccd4e70b9c286f0134185.png" />
+    <Resource Include="Image\0a57ed4de5ebe4ecaf561fb7c76883de.jpg" />
+    <Resource Include="Image\0b95387f36a30f260f3b506e00932fa1.jpg" />
+    <Resource Include="Image\0d360791408185e292fa76ed41468f59.jpg" />
+    <Resource Include="Image\1054a0b9a7f2043af691ee6cf899b05a.jpg" />
+    <Resource Include="Image\1448eb61c30b207c222b897522c40b7e.jpg" />
+    <Resource Include="Image\15caa56f474135cfbb984eb9daaa4894.jpg" />
+    <Resource Include="Image\177f406ac8b579d416ca44ef378f7779.jpg" />
+    <Resource Include="Image\17d3e099a59312234c9958dd28293129.png" />
+    <Resource Include="Image\17e08268c28c814b61ec9dc685a45caf.jpg" />
+    <Resource Include="Image\19ff1695d125cb39c67559f81da05a7d.jpg" />
+    <Resource Include="Image\1a5a7289f09a3a98255329193811026e.png" />
+    <Resource Include="Image\1c35c8187f1f8c0c80039fc49e92b5ea.jpg" />
+    <Resource Include="Image\1feb1eed389225154cae9c14f36ee048.jpg" />
+    <Resource Include="Image\1feee69a325d18b87cc12108c117d333.jpg" />
+    <Resource Include="Image\20d42652b39b9fec2568422f7b319dc5.jpg" />
+    <Resource Include="Image\22819b98c62d2e4b17a14f40a9b60280.jpg" />
+    <Resource Include="Image\249c8986342ec0ff0696005fced5ad21.jpg" />
+    <Resource Include="Image\2524324289e5d20b410d628ad561738f.jpg" />
+    <Resource Include="Image\25fdd5e20604c96f19a2f8c3cc6e6065.png" />
+    <Resource Include="Image\262c5430f5898d92e82b45de66def440.jpg" />
+    <Resource Include="Image\26a42adebf61c862fae902d5fb69d889.jpg" />
+    <Resource Include="Image\2c36bb7e3d61d442fbd561f6222bf28e.png" />
+    <Resource Include="Image\2cb3aa6cc3240059b4c5480bbc67780c.jpg" />
+    <Resource Include="Image\2dbae225b72143c47b643c9f9db9ed1c.jpg" />
+    <Resource Include="Image\36a6c5c492ce68e01af7aeac8096ac4b.jpg" />
+    <Resource Include="Image\3bd24a6decfd7cebd13bcd73f9c6eeda.jpg" />
+    <Resource Include="Image\3d2b8fdb03eb85ade05d6f71e32441b4.jpg" />
+    <Resource Include="Image\417374425316386729ebe6c586622a66.jpg" />
+    <Resource Include="Image\4307d3f6d28e5fbe50c80932cd251eae.jpg" />
+    <Resource Include="Image\435e2aa267e8674e3446f46fd81403eb.jpg" />
+    <Resource Include="Image\43cd4d7bd6889747f49acec43432afa0.jpg" />
+    <Resource Include="Image\449646e3521bc4da2fc7c218f8de89d7.jpg" />
+    <Resource Include="Image\450bab2aaa56b7f96ba8e3335310b1d3.jpg" />
+    <Resource Include="Image\4c29ca6358504d95f5f8e21305c710ca.jpg" />
+    <Resource Include="Image\4f0efc1c9fe4e95da9a921dd8bad46f4.jpg" />
+    <Resource Include="Image\52ce6efbb07029fb551ee2a48a4284e9.jpg" />
+    <Resource Include="Image\530c3172dfb1d56ed4e442ede5a626da.jpg" />
+    <Resource Include="Image\53bd6aa6ccb3fb1d44fbd8e90f9be110.jpg" />
+    <Resource Include="Image\551c1ddb2fe4aed807af613414bc0f40.jpg" />
+    <Resource Include="Image\57f31eefe0160eae1101ff3a0d66afa3.jpg" />
+    <Resource Include="Image\58287be6e028987b2654a91ac501a4bb.jpg" />
+    <Resource Include="Image\58900fc0b452800efc26b4bb706ae961.jpg" />
+    <Resource Include="Image\5931605f579d5db60b55b184ccfd8d34.jpg" />
+    <Resource Include="Image\59db6a975b2b47732b52d1de7761b8e7.png" />
+    <Resource Include="Image\5d6f3cf9361ec5cd8d1df01139269388.jpg" />
+    <Resource Include="Image\5f4ed48d3a33f47e896541e6a3d6ffcb.jpg" />
+    <Resource Include="Image\6163cc079e2081ec84584702b0e37358.jpg" />
+    <Resource Include="Image\618899c4a7a8e605694b0f88103ace95.jpg" />
+    <Resource Include="Image\62c671f06511165a7d5f55456ff6574c.jpg" />
+    <Resource Include="Image\63ec52e9424f2e3a3e988c8f0c6c8a04.png" />
+    <Resource Include="Image\6409c8b2458d7c8f3ca7ae8f75aab3f1.jpg" />
+    <Resource Include="Image\69e1025db01f0d941e26ae83516f5b2f.jpg" />
+    <Resource Include="Image\73fd0442e77e3f150ed30c932a0674dd.png" />
+    <Resource Include="Image\79d448937716931e1dd2e75d83252e75.jpg" />
+    <Resource Include="Image\7a3b8ff70f889b9f09883c67f806f320.jpg" />
+    <Resource Include="Image\7eafa804978956058ff78b0c7f32c28f.jpg" />
+    <Resource Include="Image\841bb1837d4bda7db03d6aa9857f3fab.jpg" />
+    <Resource Include="Image\8594fda24aa6785c1d7ec8617416be1d.jpg" />
+    <Resource Include="Image\87218d5f931f54ca04edef1e4a6aa2e7.png" />
+    <Resource Include="Image\8785a968ce4bbcaf34fdcb45abdfe1bb.jpg" />
+    <Resource Include="Image\884dd3252c06da7e10ecfcdeba365b7b.jpg" />
+    <Resource Include="Image\88a4bc835fd64f48079cbfdf8aa28f5f.jpg" />
+    <Resource Include="Image\8a0c5b393db7bc24e2d5c78ddeb0a0db.jpg" />
+    <Resource Include="Image\8a58b22d6ee48cda57a910bb3fb3ef37.jpg" />
+    <Resource Include="Image\8cfe0be93eeeee384376cd48facb8395.jpg" />
+    <Resource Include="Image\8e008ca787ad03b9d933327de2720aba.jpg" />
+    <Resource Include="Image\8e6b8646b99d873c745b93255c62131c.jpg" />
+    <Resource Include="Image\8eeaac429bb7d3c8a4bc64e6694a355d.jpg" />
+    <Resource Include="Image\8fa01307015eca9f07a5aa3e4d59d069.jpg" />
+    <Resource Include="Image\9aed6db8fd7688aa187b216a0f701ba8.jpg" />
+    <Resource Include="Image\9e735242c183a88e0e206eb135d768aa.jpg" />
+    <Resource Include="Image\a158fb24294902405f11d1fd88426bfb.jpg" />
+    <Resource Include="Image\a29d7fa19cae12001e7978c617f7248a.jpg" />
+    <Resource Include="Image\a5e2863228d74bba4b3e15fa156a7c5a.jpg" />
+    <Resource Include="Image\aaf3739aa4e813e680679058391329a5.png" />
+    <Resource Include="Image\ab26c77b0dbe05b828d66e30bf710850.gif" />
+    <Resource Include="Image\b1ee457931f8681efdad804ea94f40d4.jpg" />
+    <Resource Include="Image\b572bd8b4a0cec9f3529e3a531f07288.png" />
+    <Resource Include="Image\b69c1a77d99a884a2402ed2c8802ae62.jpg" />
+    <Resource Include="Image\b75bb2992d5f1ef8aff60bfe64591ace.jpg" />
+    <Resource Include="Image\b96dcf7301020ef575a3d8bfa328b22f.jpg" />
+    <Resource Include="Image\b9719d09c4cf6f37923d8e10428b9970.jpg" />
+    <Resource Include="Image\b9810b8818d5c004fe2b74da33f755f8.jpg" />
+    <Resource Include="Image\background_0.png" />
+    <Resource Include="Image\background_1.png" />
+    <Resource Include="Image\bb10c6bcc5dd8911c29ac31f8c60a962.jpg" />
+    <Resource Include="Image\bc8d756f423b12e9145bd43f43a3b348.jpg" />
+    <Resource Include="Image\be9dc82efdbfcd4b5b68e9cd9ee2767c.jpg" />
+    <Resource Include="Image\bfec4449f520342b5ecc6e99dd3dd436.jpg" />
+    <Resource Include="Image\c0918ae8426e7aac061e16d5edf09548.jpg" />
+    <Resource Include="Image\c1b469b1236c30ca3fe67801265ca977.jpg" />
+    <Resource Include="Image\c6ea6824213ef78f834a69d2f8d45d8a.jpg" />
+    <Resource Include="Image\c852c6279af84f10f6b2230620d2b4a6.jpg" />
+    <Resource Include="Image\c8e10a5178dcdfa2afcaeba4f0413fe2.jpg" />
+    <Resource Include="Image\cf220353e8c58958d0e7c7397e9fcd33.jpg" />
+    <Resource Include="Image\d16ddc0bcbe71b2a6e0d5931db82d51d.jpg" />
+    <Resource Include="Image\d34f482a3c5bdb855c8a1a69599fa36f.jpg" />
+    <Resource Include="Image\d4bb779bae9058bcb654758661f7fd5e.jpg" />
+    <Resource Include="Image\d58684de3653ca8a4485354b38b8120a.png" />
+    <Resource Include="Image\d7d392c066c19879b56176d711ef73ee.png" />
+    <Resource Include="Image\d823dd868766696323a2752723bcf3b0.jpg" />
+    <Resource Include="Image\db37165e1e1801c167c82af0a0d8e852.jpg" />
+    <Resource Include="Image\db506caa302541a17121567eb543486f.jpg" />
+    <Resource Include="Image\e0a0aa714152bca78c2709f65c214797.jpg" />
+    <Resource Include="Image\e0bd7af99a63a73ec2a6ba89fdfa7abe.jpg" />
+    <Resource Include="Image\e294758327d7d347ed01aed51606decc.jpg" />
+    <Resource Include="Image\e4dddb6d4412ee2788539dc3112157d5.jpg" />
+    <Resource Include="Image\e557d6c9857cab9c36f8d00e6b720674.jpg" />
+    <Resource Include="Image\e5828de6f12c2fce793c53955e51bc93.jpg" />
+    <Resource Include="Image\e584e831b8deb73cc5e27441c77292d7.jpg" />
+    <Resource Include="Image\e5de96e6aecb870253c97aa10fa35d47.jpg" />
+    <Resource Include="Image\e68dc388f99200734c8d9397277011c5.jpg" />
+    <Resource Include="Image\e7e61e10fcafcdc9e7fb2aff22b0162a.jpg" />
+    <Resource Include="Image\e8230cd545b029126edeeeb754557941.jpg" />
+    <Resource Include="Image\e8fd7d22c0b69224de3abd44122c0c90.jpg" />
+    <Resource Include="Image\e909c5186963601ceabe2f88791389bd.jpg" />
+    <Resource Include="Image\ea6c9216983efea306c4406b630a56d3.jpg" />
+    <Resource Include="Image\eb244ddce6218842d470765dfc14b0e1.jpg" />
+    <Resource Include="Image\ee2424769e886059058d0a84e453a442.jpg" />
+    <Resource Include="Image\ef7ee613ef41eef14192deb8322495a3.jpg" />
+    <Resource Include="Image\ef99083575cb0ca7c945fbc64570b656.jpg" />
+    <Resource Include="Image\f12dfcc9d45450dfacf2708d9101e7d3.jpg" />
+    <Resource Include="Image\f28f3f3d003fe7ec4e111c26782d00e2.jpg" />
+    <Resource Include="Image\f52f93d73e20b3f0c854659d18199e7b.jpg" />
+    <Resource Include="Image\f9654133d33974ef57d436e9c337ffdb.jpg" />
+    <Resource Include="Image\fbf052ceab7e1c56d3c7e9ff1191fbe7.jpg" />
+    <Resource Include="Image\fd616a3e83e1593d74b91f6d670dc642.jpg" />
+    <Resource Include="Image\fdcca35d5d68cf993f7ac6aea694ad8c.jpg" />
+    <Resource Include="Image\icon.png" />
+    <Resource Include="Image\instagram.png" />
+    <Resource Include="Image\no_photo.png" />
+    <Resource Include="Image\telegramm.png" />
+    <Resource Include="Image\vk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Backgrnd.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище PM04Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_User" Type="int" />
+    <Property Name="Street" Type="nvarchar" MaxLength="50" />
+    <Property Name="House" Type="nvarchar" MaxLength="50" />
+    <Property Name="Room" Type="nvarchar" MaxLength="50" />
+    <Property Name="Porch" Type="nvarchar" MaxLength="50" />
+    <Property Name="Floor" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Src" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Src" Type="nvarchar" MaxLength="100" />
+    <Property Name="Price" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="ID_Categories" Type="int" />
+  </EntityType>
+  <EntityType Name="Items_order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Items" Type="int" />
+    <Property Name="ID_Orders" Type="int" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_User" Type="int" />
+    <Property Name="ID_Order" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="gender" Type="bit" />
+    <Property Name="Roll" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_Address_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Address" Type="Self.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="ID_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_Categories1">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="ID_Categories" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_order_Items">
+    <End Role="Items" Type="Self.Items" Multiplicity="1" />
+    <End Role="Items_order" Type="Self.Items_order" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Items_order">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_order_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Items_order" Type="Self.Items_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Items_order">
+        <PropertyRef Name="ID_Orders" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="ID_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище PM04ModelContainer">
+    <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items_order" EntityType="Self.Items_order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Address_Users" Association="Self.FK_Address_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_Categories1" Association="Self.FK_Items_Categories1">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_order_Items" Association="Self.FK_Items_order_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="Items_order" EntitySet="Items_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_order_Order" Association="Self.FK_Items_order_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Items_order" EntitySet="Items_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Users" Association="Self.FK_Order_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

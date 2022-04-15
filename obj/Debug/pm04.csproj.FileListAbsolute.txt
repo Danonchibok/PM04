@@ -1,0 +1,103 @@
+C:\Users\User\Desktop\Application\pm04\pm04\bin\Debug\pm04.exe.config
+C:\Users\User\Desktop\Application\pm04\pm04\bin\Debug\pm04.exe
+C:\Users\User\Desktop\Application\pm04\pm04\bin\Debug\pm04.pdb
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\App.g.cs
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04_MarkupCompile.cache
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04_MarkupCompile.lref
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.g.resources
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.Properties.Resources.resources
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.exe
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.pdb
+C:\Users\User\Desktop\Application\pm04\pm04\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\Application\pm04\pm04\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\Application\pm04\pm04\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\Application\pm04\pm04\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\Application\pm04\pm04\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04_Content.g.cs
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\pm04.csproj.CopyComplete
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\Registration.g.cs
+C:\Users\User\Desktop\Application\pm04\pm04\obj\Debug\Registration.baml
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.csproj.AssemblyReference.cache
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.csproj.SuggestedBindingRedirects.cache
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\AuthPage.g.cs
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\Glavnaya.g.cs
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\MainWindow.g.cs
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\Registration.g.cs
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\App.g.cs
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04_Content.g.cs
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04_MarkupCompile.cache
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04_MarkupCompile.lref
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.exe
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.pdb
+D:\Download\pm04 (1)\pm04\pm04\bin\Debug\pm04.exe.config
+D:\Download\pm04 (1)\pm04\pm04\bin\Debug\pm04.exe
+D:\Download\pm04 (1)\pm04\pm04\bin\Debug\pm04.pdb
+D:\Download\pm04 (1)\pm04\pm04\bin\Debug\EntityFramework.dll
+D:\Download\pm04 (1)\pm04\pm04\bin\Debug\EntityFramework.SqlServer.dll
+D:\Download\pm04 (1)\pm04\pm04\bin\Debug\EntityFramework.xml
+D:\Download\pm04 (1)\pm04\pm04\bin\Debug\EntityFramework.SqlServer.xml
+D:\Download\pm04 (1)\pm04\pm04\bin\Debug\ru\EntityFramework.resources.dll
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\Glavnaya.baml
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\MainWindow.baml
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\Registration.baml
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\AuthPage.baml
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.g.resources
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.Properties.Resources.resources
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.csproj.GenerateResource.cache
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.csproj.CoreCompileInputs.cache
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\pm04.csproj.CopyComplete
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\Goods.g.cs
+D:\Download\pm04 (1)\pm04\pm04\obj\Debug\Goods.baml
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\pm04.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\pm04.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\AuthPage.g.cs
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\Glavnaya.g.cs
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\Goods.g.cs
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\MainWindow.g.cs
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\Order.g.cs
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\Registration.g.cs
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\App.g.cs
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\pm04_Content.g.cs
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\pm04_MarkupCompile.cache
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\pm04_MarkupCompile.lref
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\pm04.exe
+C:\Users\User\Downloads\pm04\pm04\pm04\obj\Debug\pm04.pdb
+E:\pm04\pm04\obj\Debug\pm04.csproj.AssemblyReference.cache
+E:\pm04\pm04\obj\Debug\pm04.csproj.SuggestedBindingRedirects.cache
+E:\pm04\pm04\obj\Debug\AuthPage.g.cs
+E:\pm04\pm04\obj\Debug\Glavnaya.g.cs
+E:\pm04\pm04\obj\Debug\Goods.g.cs
+E:\pm04\pm04\obj\Debug\MainWindow.g.cs
+E:\pm04\pm04\obj\Debug\Order.g.cs
+E:\pm04\pm04\obj\Debug\Registration.g.cs
+E:\pm04\pm04\obj\Debug\App.g.cs
+E:\pm04\pm04\obj\Debug\pm04_Content.g.cs
+E:\pm04\pm04\obj\Debug\pm04_MarkupCompile.cache
+E:\pm04\pm04\obj\Debug\pm04_MarkupCompile.lref
+E:\pm04\pm04\obj\Debug\pm04.exe
+E:\pm04\pm04\obj\Debug\pm04.pdb
+E:\pm04\pm04\bin\Debug\pm04.exe.config
+E:\pm04\pm04\bin\Debug\pm04.exe
+E:\pm04\pm04\bin\Debug\pm04.pdb
+E:\pm04\pm04\bin\Debug\EntityFramework.dll
+E:\pm04\pm04\bin\Debug\EntityFramework.SqlServer.dll
+E:\pm04\pm04\bin\Debug\EntityFramework.xml
+E:\pm04\pm04\bin\Debug\EntityFramework.SqlServer.xml
+E:\pm04\pm04\bin\Debug\ru\EntityFramework.resources.dll
+E:\pm04\pm04\obj\Debug\AuthPage.baml
+E:\pm04\pm04\obj\Debug\Glavnaya.baml
+E:\pm04\pm04\obj\Debug\Goods.baml
+E:\pm04\pm04\obj\Debug\MainWindow.baml
+E:\pm04\pm04\obj\Debug\Order.baml
+E:\pm04\pm04\obj\Debug\Registration.baml
+E:\pm04\pm04\obj\Debug\pm04.g.resources
+E:\pm04\pm04\obj\Debug\pm04.Properties.Resources.resources
+E:\pm04\pm04\obj\Debug\pm04.csproj.GenerateResource.cache
+E:\pm04\pm04\obj\Debug\pm04.csproj.CoreCompileInputs.cache
+E:\pm04\pm04\obj\Debug\pm04.csproj.CopyComplete
