@@ -31,13 +31,13 @@
                                      Name="textLogin"/>
                             <TextBlock Text="Введите пароль:" FontSize="19"
                                        Margin="5,0,0,0"/>
-                            <TextBox Width="250" Height="30"
+                            <PasswordBox Width="250" Height="30"
                                      BorderBrush="Gray"
                                      Margin="0,0,0,15"
                                      Name="textPassword"/>
                             <TextBlock Text="Повторите пароль:" FontSize="19"
                                        Margin="5,0,0,0"/>
-                            <TextBox Width="250" Height="30"
+                            <PasswordBox Width="250" Height="30"
                                      BorderBrush="Gray"
                                      Margin="0,0,0,15"
                                      Name="textRepeatPassword"/>

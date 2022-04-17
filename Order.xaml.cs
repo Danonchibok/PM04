@@ -53,16 +53,21 @@ namespace pm04
                
         private void Button_Create(object sender, RoutedEventArgs e)
         {
-            Model.Order order = new Model.Order();
 
             foreach (Item item in this.items)
             {
+                Model.Order order = new Model.Order();
                 Items_order itemsOrder = new Items_order();
                 itemsOrder.Item = item;
+                itemsOrder.Order = order;
+                order.User = user;
                 order.Items_order.Add(itemsOrder);
+                TemplateContext.GetContext().Items_order.Add(itemsOrder);
+                TemplateContext.GetContext().Orders.Add(order);
+                TemplateContext.GetContext().SaveChanges();
+
             }
 
-            order.User = user;
 
         }
 

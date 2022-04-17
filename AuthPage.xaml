@@ -19,11 +19,11 @@
             <TextBox Width="270" Height="30"
                      BorderBrush="Gray"
                      Margin="0,0,0,10"
-                     Name="loginTextBox"
+                     Text="{Binding Login}"
                      FontSize="19"/>
             <TextBlock Text="Пароль:" FontSize="19"
                        Margin="5,0,0,0"/>
-            <TextBox Width="270" Height="30"
+            <PasswordBox Width="270" Height="30"
                      BorderBrush="Gray"
                      Margin="0,0,0,15"
                      Name="PasswordTextBox"

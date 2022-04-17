@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +23,8 @@ namespace pm04
     public partial class Registration : UserControl
     {
         private int tabIndex =0;
+        private string pattern = @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
         public Registration()
         {
             InitializeComponent();
@@ -52,15 +55,23 @@ namespace pm04
         }
         private bool RegistrateUser()
         {
-            if (textPassword.Text != textRepeatPassword.Text)
+            Regex loginRegex = new Regex(pattern);
+
+            if (textPassword.Password != textRepeatPassword.Password)
             {
                 MessageBox.Show("Пароль неверный!");
                 return false;
             }
+            if (loginRegex.IsMatch(textLogin.Text))
+            {
+                MessageBox.Show("Логин имел неверный формат");
+                return false;
+            }
+
             User user = new User()
             {
                 Login = textLogin.Text,
-                Password = textPassword.Text,
+                Password = textPassword.Password,
                 FirstName = textFirstName.Text,
                 LastName = textLastName.Text,
                 Name = textPatronumic.Text,
