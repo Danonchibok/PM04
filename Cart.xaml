@@ -23,24 +23,24 @@
                                Text="ЦВЕТУЧЕНО" Foreground="White" 
                                FontSize="30" FontWeight="Bold"/>
                     <Button Width="80" Height="25"
-                            Margin="250,0,0,0"
+                            Margin="175,0,0,0"
                             Content="Назад" Background="White" 
                             BorderThickness="1" BorderBrush="Black" Click="Button_back"/>
-                    <Button Width="80" Height="25"
+                    <Button Width="140" Height="25"
                             Margin="20,0,0,0"
                             Content="{Binding CartInfo}" Click="Cart_Button" Background="White" 
                             BorderThickness="1" BorderBrush="Black"/>
                 </StackPanel>
             </Border>
         </StackPanel>
-        <StackPanel Height="700" 
+        <StackPanel 
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <ListView Width="900" Height="650"
+            <ListView Width="900" Height="350"
                       Background="Transparent"
                       BorderThickness="0"
                       FontSize="20"
-                      Margin="0,5,0,0"
+                      Margin="0,125,0,0"
                       Name="itemListView"
                       ItemsSource="{Binding Items}">
                 <ListView.ItemsPanel>
@@ -65,9 +65,6 @@
                                         <TextBox Text="{Binding Count}" Width="100" Height="30" Background="LightGreen" Margin="5,0,5,0"/>
                                         <Button Content="+" Width="30" Height="30" Background="LightGreen" Click="increase_button"/>
                                     </StackPanel>
-                                    <Button Content="Добавить в корзину" 
-                                            Width="160" Height="30" Background="LightGreen" 
-                                            HorizontalAlignment="Center"/>
                                 </StackPanel>
                             </StackPanel>
                         </Border>

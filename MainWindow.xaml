@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:pm04"
         mc:Ignorable="d"
         WindowStyle="ThreeDBorderWindow"
-        Title="Цветучено" Height="500" Width="1000">
+        Title="Цветучено" Height="750" Width="1000">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Image/Backgrnd.png"/>
