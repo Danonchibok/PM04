@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\pm04\pm04\obj\Debug\
+D:\Applications\GitHupApplication\PM04\obj\Debug\
 pm04
 none
 false
 DEBUG;TRACE
-E:\pm04\pm04\App.xaml
+D:\Applications\GitHupApplication\PM04\App.xaml
 7-1975741456
 2739969757
 23-1041993026
-18-1278825857
+18-1392011711
 AuthPage.xaml;Cart.xaml;Glavnaya.xaml;Goods.xaml;MainWindow.xaml;Order.xaml;Registration.xaml;
 
 False

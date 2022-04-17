@@ -35,12 +35,12 @@ namespace pm04
             InitializeComponent();
             DataContext = this;
             Categories = new ObservableCollection<Category>( TemplateContext.GetContext().Categories.ToList());
-            string[] images = Directory.GetFiles(@"E:\pm04\pm04\Image\");
+            string[] images = Directory.GetFiles(@"D:\Applications\GitHupApplication\PM04\Image\");
         
             foreach (Category item in Categories)
             {
                 try
-                { item.Image = File.ReadAllBytes(images.FirstOrDefault(img => img.Contains(@"E:\pm04\pm04\Image\" + item.Src))); }
+                { item.Image = File.ReadAllBytes(images.FirstOrDefault(img => img.Contains(@"D:\Applications\GitHupApplication\PM04\Image\" + item.Src))); }
                 catch (Exception)
                 { }
             }

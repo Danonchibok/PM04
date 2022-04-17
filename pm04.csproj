@@ -343,7 +343,6 @@
   <ItemGroup>
     <Resource Include="Image\Backgrnd.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

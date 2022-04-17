@@ -60,9 +60,9 @@ namespace pm04
             if (data != null)
             {
                 isSaveLogin = false;
+                Login = data[0];
+                Password = data[1];
             }
-            Login = data[0];
-            Password = data[1];
         }
 
         private void Button_LogIn(object sender, RoutedEventArgs e)

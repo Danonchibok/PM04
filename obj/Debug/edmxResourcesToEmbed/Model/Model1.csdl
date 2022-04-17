@@ -131,7 +131,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="PM04Entities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="PM04Entities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Addresses" EntityType="Self.Address" />
     <EntitySet Name="Categories" EntityType="Self.Category" />
     <EntitySet Name="Items" EntityType="Self.Item" />
