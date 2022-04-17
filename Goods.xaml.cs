@@ -61,14 +61,14 @@ namespace pm04
             ShopingCart = "Корзина";
             DataContext = this;
             Items = new ObservableCollection<Item>(category.Items);
-            string[] images = Directory.GetFiles(@"D:\Applications\GitHupApplication\PM04\Image\");
+            string[] images = Directory.GetFiles(@"E:\pm04\pm04\Image\");
 
             foreach (Item item in Items)
             {
                 try
-                { item.Image = File.ReadAllBytes(images.FirstOrDefault(img => img.Contains(@"D:\Applications\GitHupApplication\PM04\Image\" + item.Src))); }
+                { item.Image = File.ReadAllBytes(images.FirstOrDefault(img => img.Contains(@"E:\pm04\pm04\Image\" + item.Src))); }
                 catch (Exception)
-                { item.Image = File.ReadAllBytes(@"D:\Applications\GitHupApplication\PM04\Image\no_photo.png"); }
+                { item.Image = File.ReadAllBytes(@"E:\pm04\pm04\Image\no_photo.png"); }
             }
         }
 
@@ -118,6 +118,11 @@ namespace pm04
         private void Cart_button(object sender, RoutedEventArgs e)
         {
             NavigationClass.Navigate(new Cart(cart));
+        }
+
+        private void Back_button(object sender, RoutedEventArgs e)
+        {
+            NavigationClass.Navigate(new Glavnaya());
         }
     }
 }

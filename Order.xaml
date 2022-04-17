@@ -70,13 +70,16 @@
                             FontSize="19"/>
                     <TextBlock Text="Стоимость: "
                                FontSize="18"
-                               FontWeight="DemiBold"/>
+                               FontWeight="DemiBold"
+                               Name="priceText"/>
                     <TextBlock Text="Скидка: "
                                FontSize="18"
-                               FontWeight="DemiBold"/>
+                               FontWeight="DemiBold"
+                               Name="skidkaText"/>
                     <TextBlock Text="Итоги: "
                                FontSize="18"
-                               FontWeight="DemiBold"/>
+                               FontWeight="DemiBold"
+                               Name="itogText"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="Улица:" FontSize="19"

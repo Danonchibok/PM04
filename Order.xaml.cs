@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,14 +23,27 @@ namespace pm04
     /// </summary>
     public partial class Order : UserControl
     {
+        private string pattern = @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
         private User user => TemplateContext.User;
         private List<Item> items;
+
+        private decimal? price = 0;
+        private decimal skidka = 0;
 
         public Order(List<Item> items)
         {
             InitializeComponent();
             DataContext = this;
             this.items = items;
+
+            foreach (Item item in items)
+            {
+                price += item.Count * item.Price;
+            }
+            priceText.Text = $"Стоимость: {price}р";
+            skidkaText.Text = $"Скидка: {skidka}р";
+            itogText.Text = $"Итог: {price}р" ;
         }
 
         private void Button_Insta(object sender, RoutedEventArgs e)
@@ -53,20 +67,34 @@ namespace pm04
                
         private void Button_Create(object sender, RoutedEventArgs e)
         {
+            if (textEmail.Text == "")
+            {
+                MessageBox.Show("Введи данные");
+                return;
+            }
+
+            Regex mailRegex = new Regex(pattern);
+            if (!mailRegex.IsMatch(textEmail.Text))
+            {
+                MessageBox.Show("Данные не соотвествуют");
+                return;
+            }
+
+
+
+            Model.Order order = new Model.Order();
 
             foreach (Item item in this.items)
             {
-                Model.Order order = new Model.Order();
                 Items_order itemsOrder = new Items_order();
                 itemsOrder.Item = item;
                 itemsOrder.Order = order;
-                order.User = user;
                 order.Items_order.Add(itemsOrder);
-                TemplateContext.GetContext().Items_order.Add(itemsOrder);
-                TemplateContext.GetContext().Orders.Add(order);
-                TemplateContext.GetContext().SaveChanges();
-
             }
+            order.User = user;
+            TemplateContext.GetContext().Orders.Add(order);
+            TemplateContext.GetContext().SaveChanges();
+            MessageBox.Show("Заказ оформлен");
 
 
         }

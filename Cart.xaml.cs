@@ -113,8 +113,14 @@ namespace pm04
 
             if (item.Count < 1 && Items.Contains(item))
             {
-                Items.Remove(item);
-                CartInfo = $"Оформить ({CalculatePrice()})";
+
+                MessageBoxResult result = MessageBox.Show("Вы уверены?!", "Убрать товар из корзины?", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Items.Remove(item);
+                    CartInfo = $"Оформить ({CalculatePrice()})";
+
+                }
             }
 
         }

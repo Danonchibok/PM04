@@ -38,7 +38,7 @@ namespace pm04
                 
                 if (RegistrateUser())
                 {
-                    NavigationClass.Navigate(new Glavnaya());
+                    NavigationClass.Navigate(new AuthPage());
                 }
             }
             rega.SelectedItem = rega.Items[tabIndex];
@@ -62,35 +62,43 @@ namespace pm04
                 MessageBox.Show("Пароль неверный!");
                 return false;
             }
-            if (loginRegex.IsMatch(textLogin.Text))
+            if (!loginRegex.IsMatch(textLogin.Text))
             {
                 MessageBox.Show("Логин имел неверный формат");
                 return false;
             }
+            try
+            {
+                User user = new User()
+                {
+                    Login = textLogin.Text,
+                    Password = textPassword.Password,
+                    FirstName = textFirstName.Text,
+                    LastName = textLastName.Text,
+                    Name = textPatronumic.Text,
+                    Phone = textPhone.Text,
+                    DateOfBirth = DateTime.Parse(textBDay.Text),
+                    gender = male.IsChecked,
+                };
+                Address addres = new Address()
+                {
+                    Street = textStreet.Text,
+                    House = textNumberHouse.Text,
+                    Room = textNumberRoom.Text,
+                    Porch = textNumberDoor.Text,
+                    Floor = textNumberFloor.Text,
+                };
+                user.Addresses.Add(addres);
+                TemplateContext.GetContext().Users.Add(user);
+                TemplateContext.GetContext().SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
 
-            User user = new User()
-            {
-                Login = textLogin.Text,
-                Password = textPassword.Password,
-                FirstName = textFirstName.Text,
-                LastName = textLastName.Text,
-                Name = textPatronumic.Text,
-                Phone = textPhone.Text,
-                DateOfBirth = DateTime.Parse(textBDay.Text),
-                gender = male.IsChecked,
-            };
-            Address addres = new Address()
-            {
-                Street = textStreet.Text,
-                House = textNumberHouse.Text,
-                Room = textNumberRoom.Text,
-                Porch = textNumberDoor.Text,
-                Floor = textNumberFloor.Text,
-            };
-            user.Addresses.Add(addres);
-            TemplateContext.GetContext().Users.Add(user);
-            TemplateContext.GetContext().SaveChanges();
-            return true;
+                MessageBox.Show("Данные ввелены неверно");
+                return false;
+            }
         }
     }
 }
